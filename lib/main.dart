@@ -21,28 +21,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-<<<<<<< HEAD
-
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
-        children: [
-          Text(
-            'Hey sexy',
-          ),
-        ],
-      ),
-    );
-  }
-}
-=======
->>>>>>> e7b0af11db978367cbfc770a3cf20c31a7590fd0
