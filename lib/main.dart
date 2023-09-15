@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_testing/homepage/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+<<<<<<< HEAD
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -42,3 +44,5 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+=======
+>>>>>>> e7b0af11db978367cbfc770a3cf20c31a7590fd0
