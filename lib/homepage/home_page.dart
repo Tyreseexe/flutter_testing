@@ -30,7 +30,9 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.only(top: 50),
               child: Text(
                 'Begin',
-                style: TextStyle(fontSize: 32),
+                style: TextStyle(
+                  fontSize: 32,
+                ),
               ),
             ),
           ),
