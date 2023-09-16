@@ -42,6 +42,8 @@ class _HomePageState extends State<HomePage> {
             height: 25,
           ),
           Container(
+            height: 100,
+            width: MediaQuery.of(context).size.width - 30,
             decoration: BoxDecoration(
               color: clPrimary,
               borderRadius: BorderRadius.circular(
@@ -50,8 +52,17 @@ class _HomePageState extends State<HomePage> {
             ),
             child: const Row(
               children: [
-                Text(
-                  'Challenges',
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 20,
+                  ),
+                  child: Text(
+                    'Challenges',
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ],
             ),
