@@ -27,8 +27,14 @@ class _HomePageState extends State<HomePage> {
     return const Scaffold(
       body: Column(
         children: [
-          Text(
-            'Begin',
+          Center(
+            child: Padding(
+              padding: EdgeInsets.only(top: 50),
+              child: Text(
+                'Begin',
+                style: TextStyle(fontSize: 32),
+              ),
+            ),
           ),
         ],
       ),
