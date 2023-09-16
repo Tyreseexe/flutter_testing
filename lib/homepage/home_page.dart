@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
             child: Padding(
               padding: EdgeInsets.only(top: 50),
               child: Text(
-                'Welcome User',
+                'Welcome, User',
                 style: TextStyle(
                   fontSize: 32,
                   color: Colors.black,
