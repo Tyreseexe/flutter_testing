@@ -11,6 +11,7 @@ Create Nav Drawer
 */
 
 import 'package:flutter/material.dart';
+import 'package:flutter_testing/pages/challenge_page.dart';
 import 'package:flutter_testing/theme/colors.dart';
 
 class HomePage extends StatefulWidget {
@@ -41,30 +42,40 @@ class _HomePageState extends State<HomePage> {
           const SizedBox(
             height: 25,
           ),
-          Container(
-            height: 100,
-            width: MediaQuery.of(context).size.width - 30,
-            decoration: BoxDecoration(
-              color: clPrimary,
-              borderRadius: BorderRadius.circular(
-                20,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ChallengPage(),
+                ),
+              );
+            },
+            child: Container(
+              height: 100,
+              width: MediaQuery.of(context).size.width - 30,
+              decoration: BoxDecoration(
+                color: clPrimary,
+                borderRadius: BorderRadius.circular(
+                  20,
+                ),
               ),
-            ),
-            child: const Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                    left: 20,
-                  ),
-                  child: Text(
-                    'Challenges',
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: Colors.white,
+              child: const Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 20,
+                    ),
+                    child: Text(
+                      'Challenges',
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           )
         ],
