@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "49872264625",
+    "firebase_url": "https://changeme-e2833-default-rtdb.firebaseio.com",
+    "project_id": "changeme-e2833",
+    "storage_bucket": "changeme-e2833.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49872264625:android:d1a44b86bed3b70f91b190",
+        "android_client_info": {
+          "package_name": "com.example.flutter_testing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2UH7hp60oFdmGDwPvR8mB-CVb0OS802I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
