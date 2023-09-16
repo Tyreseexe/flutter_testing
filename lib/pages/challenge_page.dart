@@ -13,8 +13,19 @@ class _ChallengPageState extends State<ChallengPage> {
     return const Scaffold(
       body: Column(
         children: [
-          Text(
-            'challlenge page',
+          Center(
+            child: Padding(
+              padding: EdgeInsets.only(
+                top: 50,
+              ),
+              child: Text(
+                'Challlenge Page',
+                style: TextStyle(
+                  fontSize: 32,
+                  color: Colors.black,
+                ),
+              ),
+            ),
           ),
         ],
       ),
