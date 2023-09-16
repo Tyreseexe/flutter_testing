@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ChallengPage(),
+                  builder: (context) => const ChallengPage(),
                 ),
               );
             },
@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
               child: const Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(
+                    padding: EdgeInsets.only(
                       left: 20,
                     ),
                     child: Text(
