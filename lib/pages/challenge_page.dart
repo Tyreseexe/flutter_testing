@@ -49,4 +49,7 @@ class _ChallengPageState extends State<ChallengPage> {
       ),
     );
   }
+
+  //functions here
+  //custom widgets hier
 }
