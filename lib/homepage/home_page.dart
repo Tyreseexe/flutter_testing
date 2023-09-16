@@ -23,18 +23,39 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
         children: [
-          Center(
+          const Center(
             child: Padding(
               padding: EdgeInsets.only(top: 50),
               child: Text(
-                'Begin',
-                style: TextStyle(fontSize: 32, color: clPrimary),
+                'Welcome User',
+                style: TextStyle(
+                  fontSize: 32,
+                  color: Colors.black,
+                ),
               ),
             ),
           ),
+          const SizedBox(
+            height: 25,
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: clPrimary,
+              borderRadius: BorderRadius.circular(
+                20,
+              ),
+            ),
+            child: Row(
+              children: [
+                Text(
+                  'Challenges',
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
