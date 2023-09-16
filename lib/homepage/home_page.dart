@@ -11,6 +11,7 @@ Create Nav Drawer
 */
 
 import 'package:flutter/material.dart';
+import 'package:flutter_testing/theme/colors.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -30,9 +31,7 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.only(top: 50),
               child: Text(
                 'Begin',
-                style: TextStyle(
-                  fontSize: 32,
-                ),
+                style: TextStyle(fontSize: 32, color: clPrimary),
               ),
             ),
           ),
