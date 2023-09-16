@@ -12,6 +12,7 @@ Create Nav Drawer
 
 import 'package:flutter/material.dart';
 import 'package:flutter_testing/pages/challenge_page.dart';
+import 'package:flutter_testing/pages/completed_page.dart';
 import 'package:flutter_testing/theme/colors.dart';
 import 'package:get/get.dart';
 
@@ -103,7 +104,7 @@ class _HomePageState extends State<HomePage> {
               // ),
               // );
               // Get.to(const ChallengPage());
-              Get.to(() => const ChallengPage());
+              Get.to(() => const CompletedPage());
             },
             child: Container(
               height: 100,
