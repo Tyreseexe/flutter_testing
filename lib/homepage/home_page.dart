@@ -1,9 +1,7 @@
 //*TO DO
 /*
 
-Local of nie-local Database [Ruben kan kies]
-Kry design voorbeelde vir die app vanaf internet
-Copy die design
+Server Database
 
 /Later:
 Create TextSyle folders
