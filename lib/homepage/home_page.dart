@@ -27,8 +27,8 @@ Nav bar (home, workout plan, account)
 import 'package:flutter/material.dart';
 import 'package:flutter_testing/pages/challenge_page.dart';
 import 'package:flutter_testing/pages/completed_page.dart';
-import 'package:flutter_testing/theme/colors.dart';
-import 'package:flutter_testing/theme/text_styles.dart';
+import 'package:flutter_testing/themes/colors.dart';
+import 'package:flutter_testing/themes/text_styles.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatefulWidget {

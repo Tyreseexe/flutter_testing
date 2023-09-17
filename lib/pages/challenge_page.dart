@@ -63,6 +63,7 @@ class _ChallengPageState extends State<ChallengPage> {
     //Dit is ook makliker om hierso met die appbar te werk as daar bo te sit
     return AppBar(
       backgroundColor: Colors.white,
+      foregroundColor: Colors.black,
       //Hoe ver weg van die background moet hy wees
       elevation: 0,
       actions: [

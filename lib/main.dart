@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_testing/homepage/home_page.dart';
+import 'package:flutter_testing/themes/theme.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -16,10 +17,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: Themes.light,
+      darkTheme: Themes.dark,
+      themeMode: ThemeMode.dark,
       home: const HomePage(),
     );
   }
