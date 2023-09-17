@@ -39,7 +39,6 @@ class HomePage extends StatefulWidget {
 }
 
 //Global variables hierso (Global beteken dit kan van enige file gebruik word)
-bool isDarkMode = false;
 
 class _HomePageState extends State<HomePage> {
   @override
