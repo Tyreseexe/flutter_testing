@@ -14,6 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_testing/pages/challenge_page.dart';
 import 'package:flutter_testing/pages/completed_page.dart';
 import 'package:flutter_testing/theme/colors.dart';
+import 'package:flutter_testing/theme/text_styles.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatefulWidget {
@@ -27,16 +28,19 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
-          const Center(
+          Center(
             child: Padding(
-              padding: EdgeInsets.only(top: 50),
+              padding: const EdgeInsets.only(top: 50),
               child: Text(
                 'Welcome, User',
-                style: TextStyle(
-                  fontSize: 32,
+                //Bold Text (die een wat ons gemaak het)
+                //copyWith copy dit en replace
+                style: boldText.copyWith(
                   color: Colors.black,
+                  fontSize: 30,
                 ),
               ),
             ),
@@ -46,13 +50,6 @@ class _HomePageState extends State<HomePage> {
           ),
           GestureDetector(
             onTap: () {
-              // Navigator.push(
-              // context,
-              // MaterialPageRoute(
-              // builder: (context) => const ChallengPage(),
-              // ),
-              // );
-              // Get.to(const ChallengPage());
               Get.to(() => const ChallengPage());
             },
             child: Container(
@@ -64,46 +61,39 @@ class _HomePageState extends State<HomePage> {
                   20,
                 ),
               ),
-              child: const Row(
+              child: Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       left: 20,
                     ),
                     child: Text(
                       'Challenges',
-                      style: TextStyle(
+                      style: regularText.copyWith(
                         fontSize: 25,
                         color: Colors.white,
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   //icon here
-                  Icon(
+                  const Icon(
                     Icons.list_alt_rounded,
                     size: 38,
                     color: Colors.white,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   )
                 ],
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           GestureDetector(
             onTap: () {
-              // Navigator.push(
-              // context,
-              // MaterialPageRoute(
-              // builder: (context) => const ChallengPage(),
-              // ),
-              // );
-              // Get.to(const ChallengPage());
               Get.to(() => const CompletedPage());
             },
             child: Container(
@@ -115,28 +105,26 @@ class _HomePageState extends State<HomePage> {
                   20,
                 ),
               ),
-              child: const Row(
+              child: Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       left: 20,
                     ),
-                    child: Text(
-                      'Completed Challenges',
-                      style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.white,
-                      ),
-                    ),
+                    child: Text('Completed',
+                        style: regularText.copyWith(
+                          fontSize: 25,
+                          color: Colors.white,
+                        )),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   //icon here
-                  Icon(
+                  const Icon(
                     Icons.checklist_sharp,
                     size: 38,
                     color: Colors.white,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   )
                 ],
