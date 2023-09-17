@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_testing/homepage/home_page.dart';
+import 'package:flutter_testing/themes/theme_service.dart';
+import 'package:get/get.dart';
 
 class ChallengPage extends StatefulWidget {
   const ChallengPage({super.key});
@@ -12,7 +13,6 @@ class _ChallengPageState extends State<ChallengPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: _appBar(),
       body: const Column(
         children: [
@@ -56,19 +56,27 @@ class _ChallengPageState extends State<ChallengPage> {
     //Dit is ook makliker om hierso met die appbar te werk as daar bo te sit
     return AppBar(
       backgroundColor: Colors.white,
-      //Hoe ver van die background moet hy wees
+      foregroundColor: Colors.black,
+      //Hoe ver weg van die background moet hy wees
       elevation: 0,
       actions: [
         GestureDetector(
           onTap: () {
             //Verander na dark mode
             //Hierdie code gaan ons later in die settings page bere
-            isDarkMode = !isDarkMode;
+            ThemeService().switchTheme();
+            setState(() {});
           },
-          child: const Icon(
-            Icons.sunny,
-            size: 25,
-          ),
+          //As DarkMode aan is dan wys sunny as nie wys Darkmode_rounded
+          child: Get.isDarkMode
+              ? const Icon(
+                  Icons.sunny,
+                  size: 25,
+                )
+              : const Icon(
+                  Icons.dark_mode_rounded,
+                  size: 25,
+                ),
         ),
         const SizedBox(
           width: 10,

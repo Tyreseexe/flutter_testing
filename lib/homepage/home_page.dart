@@ -1,6 +1,13 @@
 //*TO DO
 /*
 
+!Ideas:
+routine
+routine planner
+workout planner
+calorie tracker
+Widgets vir home screen
+
 Ruben:
 google sign in (youtube hoe om dit te doen)
 log in page (FloatingActionButton in die log in page wat met google in sign
@@ -10,9 +17,9 @@ Nav drawer (Account page, Settings, Home, Sign out, darkmode, )
 
 Tiaan:
 Database connect
-read from database (display challenges)
-account page (user info and sign out button)
-Nav bar (home, challenge completed, challenge)
+read from database (display challenges) //eers n later ding
+account page (user info and sign out button, user stats)
+Nav bar (home, workout plan, account)
 
 
 */
@@ -20,8 +27,8 @@ Nav bar (home, challenge completed, challenge)
 import 'package:flutter/material.dart';
 import 'package:flutter_testing/pages/challenge_page.dart';
 import 'package:flutter_testing/pages/completed_page.dart';
-import 'package:flutter_testing/theme/colors.dart';
-import 'package:flutter_testing/theme/text_styles.dart';
+import 'package:flutter_testing/themes/colors.dart';
+import 'package:flutter_testing/themes/text_styles.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatefulWidget {
@@ -32,13 +39,11 @@ class HomePage extends StatefulWidget {
 }
 
 //Global variables hierso (Global beteken dit kan van enige file gebruik word)
-bool isDarkMode = false;
 
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Column(
         children: [
           Center(
@@ -100,18 +105,10 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 10,
           ),
           GestureDetector(
             onTap: () {
-              // Navigator.push(
-              // context,
-              // MaterialPageRoute(
-              // builder: (context) => const ChallengPage(),
-              // ),
-              // );
-
-              // Get.to(const ChallengPage());
               Get.to(() => const CompletedPage());
             },
             child: Container(
@@ -129,14 +126,15 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(
                       left: 20,
                     ),
-                    child: Text('Completed',
-                        style: regularText.copyWith(
-                          fontSize: 25,
-                          color: Colors.white,
-                        )),
+                    child: Text(
+                      'Completed',
+                      style: regularText.copyWith(
+                        fontSize: 25,
+                        color: Colors.white,
+                      ),
+                    ),
                   ),
                   const Spacer(),
-                  //icon here
                   const Icon(
                     Icons.checklist_sharp,
                     size: 38,

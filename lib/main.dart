@@ -2,11 +2,13 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_testing/homepage/home_page.dart';
+import 'package:flutter_testing/themes/theme.dart';
+import 'package:flutter_testing/themes/theme_service.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 void main() {
-  // WidgetsBinding.instance.initInstances();
+  WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const MyApp());
 }
@@ -32,10 +34,10 @@ class MyApp extends StatefulWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: Themes.light,
+      darkTheme: Themes.dark,
+      // themeMode: ThemeService().theme,
+      themeMode: ThemeService().theme,
       home: const HomePage(),
     );
   }
