@@ -56,13 +56,14 @@ class _ChallengPageState extends State<ChallengPage> {
     //Dit is ook makliker om hierso met die appbar te werk as daar bo te sit
     return AppBar(
       backgroundColor: Colors.white,
-      //Hoe ver van die background moet hy wees
+      //Hoe ver weg van die background moet hy wees
       elevation: 0,
       actions: [
         GestureDetector(
           onTap: () {
             //Verander na dark mode
             //Hierdie code gaan ons later in die settings page bere
+            //Die '!' beteken nie, so dit maak n True na False en False na True
             isDarkMode = !isDarkMode;
           },
           child: const Icon(

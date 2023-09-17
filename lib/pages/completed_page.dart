@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_testing/theme/text_styles.dart';
 
 class CompletedPage extends StatefulWidget {
   const CompletedPage({super.key});
@@ -15,27 +16,29 @@ class _CompletedPageState extends State<CompletedPage> {
       appBar: AppBar(
         backgroundColor: Colors.white,
       ),
-      body: const Column(
+      body: Column(
         children: [
           Center(
             child: Text(
               'Completed Challlenges',
-              style: TextStyle(
+              style: boldText.copyWith(
                 fontSize: 32,
                 color: Colors.black,
               ),
             ),
           ),
-          SizedBox(height: 25),
+          const SizedBox(
+            height: 25,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Text(
-                'Completed Challenges of All Time',
-                style: TextStyle(
+                'Completed Challenges',
+                style: regularText.copyWith(
                   fontSize: 18,
                   color: Colors.black,
                 ),
