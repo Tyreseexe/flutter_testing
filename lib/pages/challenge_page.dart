@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_testing/homepage/home_page.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ChallengPage extends StatefulWidget {
   const ChallengPage({super.key});
@@ -49,6 +50,12 @@ class _ChallengPageState extends State<ChallengPage> {
     );
   }
 
+  //!Shared Preferences gerbuik local storage om waardes te save (even as die app toe is)
+  void saveDarkMode(bool value) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setBool('isDarkMode', value);
+  }
+
   //Ons begin hierdie function met n '_' want dit is local
   //Local functions kan net binne hierdie class(Stateful widget) gebruik word
   _appBar() {
@@ -63,13 +70,26 @@ class _ChallengPageState extends State<ChallengPage> {
           onTap: () {
             //Verander na dark mode
             //Hierdie code gaan ons later in die settings page bere
-            //Die '!' beteken nie, so dit maak n True na False en False na True
-            isDarkMode = !isDarkMode;
+
+            //!SetState is baie belangrik dit refresh die current state van die app
+            //!Remove setstate en kyk wat dan gebeur, dit sal nie werk nie, dit moet refresh
+            setState(() {
+              //Die '!' beteken 'nie', so dit maak n True na False en False na True
+              isDarkMode = !isDarkMode;
+            });
+            //!Save die bool locally met Shared Preferences
+            saveDarkMode(isDarkMode);
           },
-          child: const Icon(
-            Icons.sunny,
-            size: 25,
-          ),
+          //As DarkMode aan is dan wys sunny as nie wys Darkmode_rounded
+          child: isDarkMode
+              ? const Icon(
+                  Icons.sunny,
+                  size: 25,
+                )
+              : const Icon(
+                  Icons.dark_mode_rounded,
+                  size: 25,
+                ),
         ),
         const SizedBox(
           width: 10,
