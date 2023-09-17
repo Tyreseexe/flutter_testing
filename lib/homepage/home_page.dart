@@ -24,6 +24,9 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
+//Global variables hierso (Global beteken dit kan van enige file gebruik word)
+bool isDarkMode = false;
+
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {

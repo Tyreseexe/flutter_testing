@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-//Hierso create ons n pre written scripts sodat ons nie heeltyd vir elke text
+//Hierso create ons n pre-written scripts sodat ons nie heeltyd vir elke text
 //hoef te tik wat dit moet wees nie
 
 //Bold textstyle
