@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_testing/themes/text_styles.dart';
 import 'package:flutter_testing/themes/theme_service.dart';
 import 'package:get/get.dart';
 
@@ -13,20 +14,20 @@ class _ChallengPageState extends State<ChallengPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: context.theme.colorScheme.background,
       appBar: _appBar(),
-      body: const Column(
+      body: Column(
         children: [
           Center(
             child: Text(
               'Challlenge Page',
-              style: TextStyle(
+              style: boldText.copyWith(
                 fontSize: 32,
-                color: Colors.black,
               ),
             ),
           ),
-          SizedBox(height: 25),
-          Row(
+          const SizedBox(height: 25),
+          const Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
@@ -36,12 +37,11 @@ class _ChallengPageState extends State<ChallengPage> {
                 'Challenges for the Day',
                 style: TextStyle(
                   fontSize: 18,
-                  color: Colors.black,
                 ),
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
         ],
@@ -55,17 +55,18 @@ class _ChallengPageState extends State<ChallengPage> {
     //ons skyf die appbar se code hierna toe sodat die code bo makliker lees
     //Dit is ook makliker om hierso met die appbar te werk as daar bo te sit
     return AppBar(
-      backgroundColor: Colors.white,
-      foregroundColor: Colors.black,
       //Hoe ver weg van die background moet hy wees
       elevation: 0,
+      backgroundColor: context.theme.colorScheme.background,
+      foregroundColor: Get.isDarkMode ? Colors.white : Colors.black,
       actions: [
         GestureDetector(
           onTap: () {
             //Verander na dark mode
             //Hierdie code gaan ons later in die settings page bere
-            ThemeService().switchTheme();
-            setState(() {});
+            setState(() {
+              ThemeService().switchTheme();
+            });
           },
           //As DarkMode aan is dan wys sunny as nie wys Darkmode_rounded
           child: Get.isDarkMode

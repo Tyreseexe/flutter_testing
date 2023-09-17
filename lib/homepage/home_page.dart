@@ -44,6 +44,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: context.theme.colorScheme.background,
       body: Column(
         children: [
           Center(
@@ -54,7 +55,6 @@ class _HomePageState extends State<HomePage> {
                 //Bold Text (die een wat ons gemaak het)
                 //copyWith copy dit en replace
                 style: boldText.copyWith(
-                  color: Colors.black,
                   fontSize: 30,
                 ),
               ),
@@ -129,9 +129,7 @@ class _HomePageState extends State<HomePage> {
                     child: Text(
                       'Completed',
                       style: regularText.copyWith(
-                        fontSize: 25,
-                        color: Colors.white,
-                      ),
+                          fontSize: 25, color: Colors.white),
                     ),
                   ),
                   const Spacer(),

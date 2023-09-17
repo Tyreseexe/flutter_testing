@@ -5,6 +5,7 @@ import 'package:flutter_testing/themes/theme_service.dart';
 import 'package:get/get.dart';
 
 void main() {
+  //Load net die widgets
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const MyApp());
@@ -20,7 +21,6 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: Themes.light,
       darkTheme: Themes.dark,
-      // themeMode: ThemeService().theme,
       themeMode: ThemeService().theme,
       home: const HomePage(),
     );
