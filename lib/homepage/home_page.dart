@@ -1,12 +1,19 @@
 //*TO DO
 /*
 
-Server Database
+Ruben:
+google sign in (youtube hoe om dit te doen)
+log in page (FloatingActionButton in die log in page wat met google in sign
+              As kla connect het met google gaan na home apge)
+Nav drawer (Account page, Settings, Home, Sign out, darkmode, )
 
-/Later:
-Create TextSyle folders
-Create Navigation bar
-Create Nav Drawer
+
+Tiaan:
+Database connect
+read from database (display challenges)
+account page (user info and sign out button)
+Nav bar (home, challenge completed, challenge)
+
 
 */
 
@@ -92,7 +99,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           GestureDetector(
@@ -103,6 +110,7 @@ class _HomePageState extends State<HomePage> {
               // builder: (context) => const ChallengPage(),
               // ),
               // );
+
               // Get.to(const ChallengPage());
               Get.to(() => const CompletedPage());
             },
