@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_testing/homepage/home_page.dart';
 import 'package:flutter_testing/themes/theme_service.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +13,6 @@ class _ChallengPageState extends State<ChallengPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: _appBar(),
       body: const Column(
         children: [
@@ -66,10 +64,8 @@ class _ChallengPageState extends State<ChallengPage> {
           onTap: () {
             //Verander na dark mode
             //Hierdie code gaan ons later in die settings page bere
-
-            setState(() {
-              ThemeService().switchTheme();
-            });
+            ThemeService().switchTheme();
+            setState(() {});
           },
           //As DarkMode aan is dan wys sunny as nie wys Darkmode_rounded
           child: Get.isDarkMode
