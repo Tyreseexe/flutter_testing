@@ -30,6 +30,7 @@ import 'package:flutter_testing/pages/challenge_page.dart';
 import 'package:flutter_testing/pages/completed_page.dart';
 import 'package:flutter_testing/themes/colors.dart';
 import 'package:flutter_testing/themes/text_styles.dart';
+import 'package:flutter_testing/widgets.dart/navdrawer.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatefulWidget {
@@ -45,6 +46,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const MyDrawer(),
       backgroundColor: context.theme.colorScheme.background,
       body: Column(
         children: [
