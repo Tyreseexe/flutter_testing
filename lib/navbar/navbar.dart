@@ -39,9 +39,21 @@ class _NavBarState extends State<NavBar> {
             selectedIconTheme: const IconThemeData(size: 0),
             unselectedIconTheme: const IconThemeData(size: 0),
             items: [
-              _bottombarItem(Icons.home, "", 26),
-              _bottombarItem(Icons.search_rounded, "", 26),
-              _bottombarItem(Icons.message, "", 24),
+              _bottombarItem(
+                Icons.home_filled,
+                "",
+                26,
+              ),
+              _bottombarItem(
+                Icons.list_alt_rounded,
+                "",
+                26,
+              ),
+              _bottombarItem(
+                Icons.checklist_sharp,
+                "",
+                26,
+              ),
             ],
           ),
         );
