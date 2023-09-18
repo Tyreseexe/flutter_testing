@@ -12,7 +12,8 @@ Ruben:
 google sign in (youtube hoe om dit te doen)
 log in page (FloatingActionButton in die log in page wat met google in sign
               As kla connect het met google gaan na home apge)
-Nav drawer (Account page, about page, Settings, Home, Sign out, darkmode, )
+Nav drawer (Account page, Settings, Home, Sign out, darkmode, )
+about page
 
 
 Tiaan:
