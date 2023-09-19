@@ -6,6 +6,7 @@ routine
 routine planner
 workout planner
 Widgets vir home screen
+did you know popups (tips about gym and diet etc)
 
 Ruben:
 google sign in
