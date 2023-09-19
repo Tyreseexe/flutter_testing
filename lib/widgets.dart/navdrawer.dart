@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_testing/pages/account_page.dart';
 import 'package:get/get.dart';
+import 'package:flutter_testing/themes/colors.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -13,7 +14,7 @@ class MyDrawer extends StatelessWidget {
         children: <Widget>[
           const DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.black,
+              color: clSecondary,
             ),
             child: Text(
               'ChangeMe',
@@ -33,7 +34,11 @@ class MyDrawer extends StatelessWidget {
             onTap: () {
               Get.to(() => const AccountPage());
             },
-          )
+          ),
+          const Divider(
+            thickness: 2,
+            color: Colors.grey,
+          ),
         ],
       ),
     );
