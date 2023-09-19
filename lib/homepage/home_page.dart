@@ -47,19 +47,17 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const MyDrawer(),
+      appBar: _appBar(),
       backgroundColor: context.theme.colorScheme.background,
       body: Column(
         children: [
           Center(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 50),
-              child: Text(
-                'Welcome, User',
-                //Bold Text (die een wat ons gemaak het)
-                //copyWith copy dit en replace
-                style: boldText.copyWith(
-                  fontSize: 30,
-                ),
+            child: Text(
+              'Welcome, User',
+              //Bold Text (die een wat ons gemaak het)
+              //copyWith copy dit en replace
+              style: boldText.copyWith(
+                fontSize: 30,
               ),
             ),
           ),
@@ -149,6 +147,18 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  _appBar() {
+    return AppBar(
+      backgroundColor: context.theme.colorScheme.background,
+      elevation: 0,
+      toolbarHeight: 40,
+      foregroundColor: Get.isDarkMode ? Colors.white : Colors.black,
+      iconTheme: const IconThemeData(
+        size: 28,
       ),
     );
   }

@@ -28,11 +28,11 @@ class _NavBarState extends State<NavBar> {
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.shifting,
             backgroundColor: Colors.white,
+            unselectedItemColor: Colors.grey,
+            selectedItemColor: clPrimary,
             showSelectedLabels: false,
             showUnselectedLabels: false,
             elevation: 0,
-            selectedItemColor: clPrimary,
-            unselectedItemColor: Colors.grey,
             currentIndex: controller.tabIndex,
             onTap: controller.changeTabIndex,
             selectedFontSize: 0,
