@@ -16,14 +16,18 @@ class MyDrawer extends StatelessWidget {
             child: Text(
               'ChangeMe',
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 24,
               ),
             ),
           ),
           ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Seetings'),
+            leading: Icon(
+              Icons.settings,
+            ),
+            title: Text(
+              'Settings',
+            ),
           )
         ],
       ),
