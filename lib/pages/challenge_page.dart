@@ -26,7 +26,9 @@ class _ChallengPageState extends State<ChallengPage> {
               ),
             ),
           ),
-          const SizedBox(height: 25),
+          const SizedBox(
+            height: 25,
+          ),
           const Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
