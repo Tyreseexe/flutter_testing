@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_testing/pages/account_page.dart';
+import 'package:get/get.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -8,8 +10,8 @@ class MyDrawer extends StatelessWidget {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
-        children: const <Widget>[
-          DrawerHeader(
+        children: <Widget>[
+          const DrawerHeader(
             decoration: BoxDecoration(
               color: Colors.black,
             ),
@@ -22,12 +24,15 @@ class MyDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.settings,
             ),
-            title: Text(
+            title: const Text(
               'Settings',
             ),
+            onTap: () {
+              Get.to(() => AccountPage());
+            },
           )
         ],
       ),

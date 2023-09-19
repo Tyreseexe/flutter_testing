@@ -20,7 +20,6 @@ Tiaan:
 Database connect
 read from database (display challenges) //eers n later ding
 account page (user info and sign out button, user stats)
-Nav bar (home, workout plan, account)
 
 
 */
