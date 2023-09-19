@@ -11,6 +11,11 @@ List<String> challenges = [
       'Write Something Down You are Grateful For'
       'Learn a New Skill today'
       'Stretch for 3 Minutes Today'
+      'Make Some Money Today'
+      'Today You Have To Take a Cold Shower'
+      'Wake Up 30 Minutes Earlier Tomorrow'
+      'Drink the Recommended Amount of Water Today'
+      'Give a Sincere Compliment to Someone'
 ];
 
 /*
