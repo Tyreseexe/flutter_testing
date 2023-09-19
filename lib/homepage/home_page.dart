@@ -5,21 +5,20 @@
 routine
 routine planner
 workout planner
-calorie tracker
 Widgets vir home screen
 
 Ruben:
-google sign in (youtube hoe om dit te doen)
-log in page (FloatingActionButton in die log in page wat met google in sign
-              As kla connect het met google gaan na home apge)
-Nav drawer (Account page, Settings, Home, Sign out, darkmode, )
+google sign in
+log in page 
+Nav drawer 
 about page
-
 
 Tiaan:
 Database connect
-read from database (display challenges) //eers n later ding
-account page (user info and sign out button, user stats)
+account page
+workout page
+navbar
+local storage vir die
 
 
 */

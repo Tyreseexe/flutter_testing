@@ -19,7 +19,7 @@ class _CompletedPageState extends State<CompletedPage> {
         children: [
           Center(
             child: Text(
-              'Completed Challlenges',
+              'Completed\n      Challlenges',
               style: boldText.copyWith(
                 fontSize: 32,
               ),
@@ -28,17 +28,11 @@ class _CompletedPageState extends State<CompletedPage> {
           const SizedBox(
             height: 25,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const SizedBox(
+              SizedBox(
                 width: 20,
-              ),
-              Text(
-                'Completed Challenges',
-                style: regularText.copyWith(
-                  fontSize: 18,
-                ),
               ),
             ],
           ),

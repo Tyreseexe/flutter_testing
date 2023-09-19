@@ -25,7 +25,7 @@ class WorkoutPlanPageState extends State<WorkoutPlanPage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
