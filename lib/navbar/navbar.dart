@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_testing/navbar/bar_controller.dart';
+import 'package:flutter_testing/pages/account_page.dart';
 import 'package:flutter_testing/pages/challenge_page.dart';
-import 'package:flutter_testing/pages/completed_page.dart';
 import 'package:flutter_testing/themes/colors.dart';
 import 'package:get/get.dart';
 import '../homepage/home_page.dart';
@@ -23,7 +23,7 @@ class _NavBarState extends State<NavBar> {
         return Scaffold(
           body: IndexedStack(
             index: controller.tabIndex,
-            children: const [HomePage(), ChallengPage(), CompletedPage()],
+            children: const [HomePage(), ChallengPage(), AccountPage()],
           ),
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.shifting,
@@ -49,10 +49,14 @@ class _NavBarState extends State<NavBar> {
                 "",
                 26,
               ),
-              _bottombarItem(
-                Icons.checklist_sharp,
-                "",
-                26,
+              const BottomNavigationBarItem(
+                icon: CircleAvatar(
+                  backgroundImage: NetworkImage(
+                    'https://pbs.twimg.com/media/D4pKJmjUEAAPKf4?format=jpg&name=small',
+                  ),
+                  radius: 14,
+                ),
+                label: '',
               ),
             ],
           ),
