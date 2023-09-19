@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_testing/themes/text_styles.dart';
 import 'package:flutter_testing/themes/theme_service.dart';
+import 'package:flutter_testing/widgets.dart/challenges.dart';
 import 'package:get/get.dart';
 
 class ChallengPage extends StatefulWidget {
@@ -13,6 +16,9 @@ class ChallengPage extends StatefulWidget {
 class _ChallengPageState extends State<ChallengPage> {
   @override
   Widget build(BuildContext context) {
+    Random random = Random();
+    int iRandom = random.nextInt(challengesList.length);
+    String randomChallenge = challengesList[iRandom];
     return Scaffold(
       backgroundColor: context.theme.colorScheme.background,
       appBar: _appBar(),
@@ -46,6 +52,8 @@ class _ChallengPageState extends State<ChallengPage> {
           const SizedBox(
             height: 25,
           ),
+          //
+          Text(randomChallenge),
         ],
       ),
     );
