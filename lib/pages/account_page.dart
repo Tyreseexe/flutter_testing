@@ -51,17 +51,103 @@ class _AccountPageState extends State<AccountPage> {
             sInfo: 'Gay',
           ),
           const Spacer(),
-          FloatingActionButton(
-            onPressed: () {
-              //log out logic here
-            },
-            backgroundColor: clPrimary,
-            child: const Text(
-              'data',
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20),
+            child: TextButton(
+              onPressed: () {
+                _logOutAlert();
+              },
+              style: ButtonStyle(
+                textStyle: MaterialStateProperty.all<TextStyle>(
+                  const TextStyle(
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w700,
+                    fontSize: 14,
+                    color: Colors.white,
+                  ),
+                ),
+                foregroundColor: MaterialStateProperty.all<Color>(
+                  Colors.white,
+                ),
+                backgroundColor: MaterialStateProperty.all<Color>(
+                  clPrimary,
+                ),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                ),
+                minimumSize: MaterialStateProperty.all<Size>(
+                  Size(
+                    MediaQuery.of(context).size.width,
+                    38,
+                  ),
+                ),
+              ),
+              child: const Text('Log Out'),
             ),
+          ),
+          const SizedBox(
+            height: 20,
           ),
         ],
       ),
+    );
+  }
+
+  _logOutAlert() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          backgroundColor: context.theme.colorScheme.background,
+          title: const Text(
+            'Log Out',
+            style: TextStyle(
+              fontFamily: 'Roboto',
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+              color: Colors.black,
+            ),
+          ),
+          content:
+              Text('Are you sure you want to log out of the existing account?',
+                  style: regularText.copyWith(
+                    fontSize: 16,
+                    color: Colors.black,
+                  )),
+          actions: <Widget>[
+            TextButton(
+              child: Text('Cancel',
+                  style: regularText.copyWith(
+                    fontSize: 16,
+                    color: Colors.grey[600],
+                  )),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            TextButton(
+              child: const Text(
+                'Yes',
+                style: TextStyle(
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: clPrimary,
+                ),
+              ),
+              onPressed: () {
+                //log out logic goes here
+              },
+            ),
+          ],
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          elevation: 20,
+        );
+      },
     );
   }
 
