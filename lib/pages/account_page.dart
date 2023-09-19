@@ -16,11 +16,11 @@ class _AccountPageState extends State<AccountPage> {
     return Scaffold(
       backgroundColor: context.theme.colorScheme.background,
       appBar: _appBar(),
-      body: const Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Center(
+          const Center(
             child: CircleAvatar(
               //User image hier
               backgroundImage: NetworkImage(
@@ -29,13 +29,37 @@ class _AccountPageState extends State<AccountPage> {
               radius: 62,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          AccountInfoWidget(
+          const AccountInfoWidget(
             sTitle: 'Name',
             sInfo: 'BlackMan',
-          )
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const AccountInfoWidget(
+            sTitle: 'Email',
+            sInfo: 'gaydude@gmail.com',
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const AccountInfoWidget(
+            sTitle: 'Average Mood',
+            sInfo: 'Gay',
+          ),
+          const Spacer(),
+          FloatingActionButton(
+            onPressed: () {
+              //log out logic here
+            },
+            backgroundColor: clPrimary,
+            child: const Text(
+              'data',
+            ),
+          ),
         ],
       ),
     );
