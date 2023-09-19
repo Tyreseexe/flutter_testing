@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_testing/homepage/home_page.dart';
 import 'package:flutter_testing/pages/account_page.dart';
 import 'package:get/get.dart';
 import 'package:flutter_testing/themes/colors.dart';
@@ -39,6 +40,13 @@ class MyDrawer extends StatelessWidget {
             thickness: 2,
             color: Colors.grey,
           ),
+          ListTile(
+            leading: Icon(Icons.exit_to_app),
+            title: Text('Logout'),
+            onTap: () {
+              Get.to(() => const HomePage());
+            },
+          )
         ],
       ),
     );
