@@ -16,11 +16,11 @@ class _AccountPageState extends State<AccountPage> {
     return Scaffold(
       backgroundColor: context.theme.colorScheme.background,
       appBar: _appBar(),
-      body: Column(
+      body: const Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Center(
+          Center(
             child: CircleAvatar(
               //User image hier
               backgroundImage: NetworkImage(
@@ -29,43 +29,12 @@ class _AccountPageState extends State<AccountPage> {
               radius: 62,
             ),
           ),
-          const SizedBox(
+          SizedBox(
             height: 20,
           ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 20,
-            ),
-            child: Text(
-              'Name',
-              style: boldText.copyWith(
-                fontSize: 16,
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: SizedBox(
-              height: 40,
-              child: TextFormField(
-                readOnly: true,
-                style: const TextStyle(
-                  color: Colors.black,
-                ),
-                decoration: InputDecoration(
-                  fillColor: clPrimary,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: const BorderSide(
-                      color: clPrimary,
-                    ),
-                  ),
-                ),
-              ),
-            ),
+          AccountInfoWidget(
+            sTitle: 'Name',
+            sInfo: 'BlackMan',
           )
         ],
       ),
@@ -77,6 +46,79 @@ class _AccountPageState extends State<AccountPage> {
       backgroundColor: context.theme.colorScheme.background,
       elevation: 0,
       foregroundColor: Get.isDarkMode ? Colors.white : Colors.black,
+    );
+  }
+}
+
+class AccountInfoWidget extends StatelessWidget {
+  final String sInfo;
+  final String sTitle;
+
+  const AccountInfoWidget({
+    super.key,
+    required this.sInfo,
+    required this.sTitle,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 20,
+          ),
+          child: Text(
+            sTitle,
+            style: boldText.copyWith(
+              fontSize: 16,
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: SizedBox(
+            height: 45,
+            child: TextFormField(
+              textAlign: TextAlign.center,
+              textAlignVertical: TextAlignVertical.top,
+              initialValue: sInfo,
+              readOnly: true,
+              style: const TextStyle(
+                color: Colors.black,
+              ),
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: const BorderSide(
+                    width: 2,
+                    color: clPrimary,
+                  ),
+                ),
+                disabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: const BorderSide(
+                    width: 4,
+                    color: clPrimary,
+                  ),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: const BorderSide(
+                    width: 2,
+                    color: clPrimary,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        )
+      ],
     );
   }
 }
