@@ -25,29 +25,40 @@ class MyDrawer extends StatelessWidget {
               ),
             ),
           ),
-          ListTile(
-            leading: const Icon(
-              Icons.settings,
+          //alles onder toe moet in n colum wees
+          Expanded(
+            child: Column(
+              children: [
+                ListTile(
+                  leading: const Icon(
+                    Icons.settings,
+                  ),
+                  title: const Text(
+                    'Settings',
+                  ),
+                  onTap: () {
+                    Get.to(() => const AccountPage());
+                  },
+                ),
+                const Divider(
+                  thickness: 2,
+                  color: Colors.grey,
+                ),
+                const Spacer(),
+                Padding(
+                  padding: EdgeInsets.zero,
+                  child: ListTile(
+                    leading: const Icon(Icons.exit_to_app),
+                    title: const Text('Logout'),
+                    onTap: () {
+                      Get.to(() => const HomePage());
+                    },
+                  ),
+                ),
+              ],
             ),
-            title: const Text(
-              'Settings',
-            ),
-            onTap: () {
-              Get.to(() => const AccountPage());
-            },
-          ),
-          const Divider(
-            thickness: 2,
-            color: Colors.grey,
-          ),
-          ListTile(
-            leading: const Icon(Icons.exit_to_app),
-            title: const Text('Logout'),
-            onTap: () {
-              Get.to(() => const HomePage());
-            },
-          )
-        ],
+          ), //children
+        ], //<Widget>[]
       ),
     );
   }
