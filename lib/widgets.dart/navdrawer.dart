@@ -11,8 +11,8 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        children: const <Widget>[
-          DrawerHeader(
+        children: <Widget>[
+          const DrawerHeader(
             decoration: BoxDecoration(
               color: clSecondary,
             ),
@@ -24,8 +24,39 @@ class MyDrawer extends StatelessWidget {
               ),
             ),
           ),
-          MenuItems(),
-        ],
+          //alles onder toe moet in n colum wees
+          Column(
+            children: [
+              ListTile(
+                leading: const Icon(
+                  Icons.settings,
+                ),
+                title: const Text(
+                  'Settings',
+                ),
+                onTap: () {
+                  Get.to(() => const AccountPage());
+                },
+              ),
+              const Divider(
+                indent: 20,
+                endIndent: 20,
+                thickness: 2,
+                color: clSecondary,
+              ),
+              Padding(
+                padding: EdgeInsets.zero,
+                child: ListTile(
+                  leading: const Icon(Icons.exit_to_app),
+                  title: const Text('Logout'),
+                  onTap: () {
+                    Get.to(() => const HomePage());
+                  },
+                ),
+              ),
+            ],
+          ), //children
+        ], //<Widget>[]
       ),
     );
   }

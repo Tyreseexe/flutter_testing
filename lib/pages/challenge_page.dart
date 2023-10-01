@@ -76,17 +76,18 @@ class _ChallengPageState extends State<ChallengPage> {
           const SizedBox(
             height: 20,
           ),
-          const Expanded(
+          Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'Completed Challenges',
                   style: TextStyle(
                     fontSize: 18,
                   ),
                 ),
+                
               ],
             ),
           ),
