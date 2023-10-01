@@ -17,7 +17,7 @@ class ChallengPage extends StatefulWidget {
 class _ChallengPageState extends State<ChallengPage> {
   @override
   Widget build(BuildContext context) {
-    //Random challenge
+    // Random challenge
     int iRandom = Random().nextInt(challengesList.length);
     String randomChallenge = challengesList[iRandom];
 
@@ -87,35 +87,44 @@ class _ChallengPageState extends State<ChallengPage> {
                     fontSize: 18,
                   ),
                 ),
-                
+                Flexible(
+                  child: ListView.builder(
+                    itemCount: 20,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        title: Text('Item $index'),
+                      );
+                    },
+                  ),
+                ),
               ],
             ),
-          ),
+          )
         ],
       ),
     );
   }
 
-  //Ons begin hierdie function met n '_' want dit is local
-  //Local functions kan net binne hierdie class(Stateful widget) gebruik word
+  // Ons begin hierdie function met n '_' want dit is local
+  // Local functions kan net binne hierdie class(Stateful widget) gebruik word
   _appBar() {
-    //ons skyf die appbar se code hierna toe sodat die code bo makliker lees
-    //Dit is ook makliker om hierso met die appbar te werk as daar bo te sit
+    // ons skyf die appbar se code hierna toe sodat die code bo makliker lees
+    // Dit is ook makliker om hierso met die appbar te werk as daar bo te sit
     return AppBar(
-      //Hoe ver weg van die background moet hy wees
+      // Hoe ver weg van die background moet hy wees
       elevation: 0,
       backgroundColor: context.theme.colorScheme.background,
       foregroundColor: Get.isDarkMode ? Colors.white : Colors.black,
       actions: [
         GestureDetector(
           onTap: () {
-            //Verander na dark mode
-            //Hierdie code gaan ons later in die settings page bere
+            // Verander na dark mode
+            // Hierdie code gaan ons later in die settings page bere
             setState(() {
               ThemeService().switchTheme();
             });
           },
-          //As DarkMode aan is dan wys sunny as nie wys Darkmode_rounded
+          // As DarkMode aan is dan wys sunny as nie wys Darkmode_rounded
           child: Get.isDarkMode
               ? const Icon(
                   Icons.sunny,
