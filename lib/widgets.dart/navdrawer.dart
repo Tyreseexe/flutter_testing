@@ -31,9 +31,7 @@ class MyDrawer extends StatelessWidget {
                 leading: const Icon(
                   Icons.settings,
                 ),
-                title: const Text(
-                  'Settings',
-                ),
+                title: const Text('Settings'),
                 onTap: () {
                   Get.to(() => const AccountPage());
                 },
