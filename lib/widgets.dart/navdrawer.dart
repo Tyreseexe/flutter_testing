@@ -36,12 +36,7 @@ class MyDrawer extends StatelessWidget {
                   Get.to(() => const AccountPage());
                 },
               ),
-              const Divider(
-                indent: 20,
-                endIndent: 20,
-                thickness: 2,
-                color: clSecondary,
-              ),
+              const Spacer(),
               Padding(
                 padding: EdgeInsets.zero,
                 child: ListTile(
@@ -56,45 +51,6 @@ class MyDrawer extends StatelessWidget {
           ), //children
         ], //<Widget>[]
       ),
-    );
-  }
-}
-
-class MenuItems extends StatelessWidget {
-  const MenuItems({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ListTile(
-          leading: const Icon(
-            Icons.settings,
-          ),
-          title: const Text(
-            'Settings',
-          ),
-          onTap: () {
-            Get.to(() => const AccountPage());
-          },
-        ),
-        const Divider(
-          thickness: 2,
-          color: Colors.grey,
-        ),
-        Padding(
-          padding: EdgeInsets.zero,
-          child: ListTile(
-            leading: const Icon(Icons.exit_to_app),
-            title: const Text('Logout'),
-            onTap: () {
-              Get.to(() => const HomePage());
-            },
-          ),
-        ),
-      ],
     );
   }
 }
